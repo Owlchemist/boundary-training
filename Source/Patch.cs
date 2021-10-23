@@ -3,6 +3,7 @@ using HarmonyLib;
 using Verse;
 using Verse.AI;
 using RimWorld;
+using System;
 
 namespace BoundaryTraining
 {
@@ -11,7 +12,17 @@ namespace BoundaryTraining
 	{
 		static public bool Prefix(Pawn pawn, TrainableDef td)
 		{	
-			if (td == ResourceBank.TrainableDefOf.Owl_Boundaries && pawn.RaceProps.roamMtbDays == null) return false;
+			if (td == ResourceBank.TrainableDefOf.Owl_Boundaries && (pawn.RaceProps.roamMtbDays == null || pawn.RaceProps.Dryad)) return false;
+			return true;
+		}
+    }
+
+	[HarmonyPatch(typeof(PawnColumnWorker_Trainable), nameof(PawnColumnWorker_Trainable.DoCell))]
+	public class Patch_DoCell
+	{
+		static public bool Prefix(Pawn pawn, PawnColumnWorker_Trainable __instance)
+		{	
+			if (__instance.def.trainable == ResourceBank.TrainableDefOf.Owl_Boundaries && (pawn.RaceProps.roamMtbDays == null || pawn.RaceProps.Dryad)) return false;
 			return true;
 		}
     }
