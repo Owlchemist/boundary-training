@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<TrainableDef>
+		<defName>Owl_Boundaries</defName>
+		<label>boundaries</label>
+		<description>The animal can be trained to understand its boundaries so it won't roam away.</description>
+		<icon>UI/Icons/Trainables/Boundaries</icon>
+		<listPriority>300</listPriority>
+		<difficulty>200</difficulty>
+		<requiredTrainability>None</requiredTrainability>
+		<minBodySize>0.60</minBodySize>
+		<steps>3</steps>
+		<prerequisites>
+			<li>Tameness</li>
+		</prerequisites>
+		<defaultTrainable>true</defaultTrainable>
+		<tags>
+			<li>Basic</li>
+		</tags>
+	</TrainableDef>  
+</Defs>
