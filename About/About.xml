@@ -16,4 +16,8 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 		</li>
 	</modDependencies>
+	<loadAfter>
+		<li>arandomkiwi.killforme</li>
+		<li>arandomkiwi.huntforme</li>
+	</loadAfter>
 </ModMetaData>

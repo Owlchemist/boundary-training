@@ -8,7 +8,6 @@
 		<listPriority>300</listPriority>
 		<difficulty>200</difficulty>
 		<requiredTrainability>None</requiredTrainability>
-		<minBodySize>0.60</minBodySize>
 		<steps>3</steps>
 		<prerequisites>
 			<li>Tameness</li>
