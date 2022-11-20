@@ -33,7 +33,7 @@ namespace BoundaryTraining
 	{
 		static public void Postfix(ref bool __result, Pawn pawn)
 		{
-			if (pawn.training.HasLearned(ResourceBank.TrainableDefOf.Owl_Boundaries)) __result = false;
+			if (pawn.training?.HasLearned(ResourceBank.TrainableDefOf.Owl_Boundaries) ?? false) __result = false;
 		}
     }
 	//Allows trained animals to use areas
